@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Select from "./Select";
+import React, { Component } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const names = ["Oliver Hansen", "Van Henry", "April Tucker", "Ralph Hubbard"];
+
+const ages = ["None", "Twenty", "Twenty one", "Twenty one and a half"];
+
+class App extends Component {
+  constructor() {
+    super();
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Select
+          label="Tag"
+          id="takehome-1"
+          multiple
+          style={{
+            width: 250,
+            color: "purple",
+          }}
+          data={names}
+        />
+
+        <Select
+          label="Age"
+          id="takehome-2"
+          style={{
+            width: 175,
+            color: "green",
+          }}
+          data={ages}
+        />
+      </div>
+    );
+  }
 }
-
 export default App;

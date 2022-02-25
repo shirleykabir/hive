@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+fieldset {
+  height: 65;
+  padding: 5px;
+  border-radius: 3px;
+  text-overflow: ellipsis;
+  display: inline-block;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.field-label {
+  font-size: 12px;
+  font-weight: 400px;
+  letter-spacing: 0.11px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.select {
+  display: inline-block;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#checkboxes {
+  height: 23px;
+  padding: 10px 12px;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  top: 30px;
+  left: -10px;
+  position: relative;
+  background-color: gray;
+  background-color: rgb(255, 255, 255);
+  z-index: 100;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 120%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+li {
+  padding: 8px 12px;
+}
+
+li:hover {
+  background-color: rgba(25, 118, 210, 0.08);
+  cursor: pointer;
+}
+
+
+li.selected {
+  background-color: rgba(25, 118, 210, 0.08);
+}
+
+
+label {
+  height: 23px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: block;
+}
+
+input[type="text"] {
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  left: 10px;
+  position: relative;
+  line-height: 150%;
+}
+
+input[type="text"]:focus {
+  outline: none;
 }
